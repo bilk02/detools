@@ -24,7 +24,7 @@ patch.
 
 .. code-block:: text
 
-   $ detools create_patch tests/files/foo.old tests/files/foo.new foo.patch
+   $ detools create_patch tests/files/foo/old tests/files/foo/new foo.patch
 
 Patch layout:
 
@@ -43,7 +43,7 @@ Patches of this type are slightly smaller than sequential patches.
 .. code-block:: text
 
    $ detools create_patch --patch-type hdiffpatch \
-       tests/files/foo.old tests/files/foo.new foo.patch
+       tests/files/foo/old tests/files/foo/new foo.patch
 
 Patch layout:
 
@@ -67,8 +67,8 @@ options ``--memory-size`` and ``--segment-size`` are required, while
 
 .. code-block:: text
 
-   $ detools create_patch --type in-place --memory-size 131072 --segment-size 32768 \
-         tests/files/foo.old tests/files/foo.new foo.patch
+   $ detools create_patch_in_place --memory-size 131072 --segment-size 32768 \
+         tests/files/foo/old tests/files/foo/new foo.patch
 
 Here is an example of an in-place application update from version 1 to
 version 2. The two applications are represented by the character
